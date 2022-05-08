@@ -1,0 +1,510 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  section{
+      display: flex;
+      place-items: center;
+      justify-content: center;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+.title {
+     font-size: 2rem;
+     font-family: "Times New Roman", Times, serif;
+     font-weight: bold;
+     font-style: normal;
+     text-align: center;
+     padding: 1rem;
+}
+
+pre {
+     background: whitesmoke;
+     border-left: 5px solid turquoise;
+     border-right: 5px solid turquoise;
+     border-top: 1px solid turquoise;
+     border-bottom: 1px solid turquoise;
+     padding: 0;
+     margin: 0 auto;
+     width: 80%;
+     position: relative;
+}
+
+/*code::before {*/
+/*     font-size: 1.0rem;*/
+/*     font-weight: bold;*/
+/*     color: turquoise;*/
+/*     content: "</>";*/
+/*     position: absolute;*/
+/*     left: 0.5rem;*/
+/*     top: 0.25rem;*/
+/*}*/
+
+code {
+     font-size: 1.05rem;
+     color: rgb(78, 78, 78);
+}
+
+/*code::after {*/
+/*     font-size: 1.0rem;*/
+/*     font-weight: bold;*/
+/*     color: turquoise;*/
+/*     content: "</>";*/
+/*     position: absolute;*/
+/*     right: 0.5rem;*/
+/*     bottom: 0.25rem;*/
+/*}*/
+
+.ad_banner{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.ad_description{
+    width: 100%;
+    background-color: turquoise;
+    height: 300px;
+}
+
+
+.AdsInnov_Container_Parallax {
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin: 40px auto;
+  }
+
+  .AdsInnov_Container_Parallax_one {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+    z-index: auto;
+    clip: rect(0, auto, auto, 0);
+  }
+
+  .AdsInnov_Container_Parallax_two {
+    vertical-align: bottom;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .AdsInnov_Container_Parallax_two {
+      width: 75% !important;
+    }
+  }
+
+  .int_css {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 9999999999;
+  }
+
+  .section_1 {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid black;
+  }
+
+  .section_2 {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .section_3 {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    height: 90px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .section_3 {
+      bottom: 60px !important;
+    }
+  }
+
+  .button-13:hover {
+    background-color: #f7fafa;
+  }
+
+  .button-13:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+    outline: 0;
+  }
+
+  .AdsInnov_LB_adsblocks {
+    min-width: 728px;
+    min-height: 90px;
+  }
+
+  .AdsInnov_ATF_adsblocks {
+    min-width: 300px;
+    min-height: 600px;
+  }
+
+  .AdsInnov_MTF_adsblocks {
+    min-width: 300px;
+    min-height: 250px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .AdsInnov_LB_adsblocks {
+      min-width: 300px;
+      min-height: 250px;
+    }
+  }
+
+  .Adsinnov_flex_adcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .AdsInnov_Ad_Card_MTF {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .AdsInnov_Ad_Card_Leaderboard {
+    width: 728px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .AdsInnov_Ad_Card_2_MTF {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .AdsInnov_Ad_Card_RSB {
+    width: 300px;
+    height: 280px;
+    padding: 5px;
+  }
+
+  .AdsInnov_Ad_Lable {
+    height: 21px;
+    text-transform: uppercase;
+    color: grey;
+    text-align: center;
+    font-size: 8px;
+  }
+
+  .AdsInnov_Ad_Card_MTF_A {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  @media (max-width: 768px) {
+    .Adsinnov_flex_adcontainer {
+      flex-direction: column;
+    }
+
+    .AdsInnov_Ad_Card_2_MTF {
+      display: none;
+    }
+
+    .AdsInnov_Ad_Card_MTF {
+      width: 100%;
+      height: 280px;
+      display: block;
+    }
+
+    .AdsInnov_Ad_Card_MTF_A {
+      width: 100%;
+      height: 70px;
+      display: block;
+    }
+
+    .AdsInnov_Ad_Card_Leaderboard {
+      width: 100%;
+      height: 280px;
+      display: block;
+    }
+  }
